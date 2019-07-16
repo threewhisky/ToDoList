@@ -2,8 +2,7 @@ import React from 'react';
 import './ToDoList.css';
 import Header from './components/Header/Header';
 import Input from './components/Input/Input';
-import ToDoItemList from './components/ToDoItemList/ToDoItemList';
-import CompleteItemList from './components/CompleteItemList/CompleteItemList'
+import ItemList from './components/ItemList/ItemList';
 
 
 class ToDoList extends React.Component {
@@ -123,19 +122,28 @@ class ToDoList extends React.Component {
         />
 
         {/* 下面是 待完成的事项 组件 */}
-        <ToDoItemList 
-          itemList={this.state.itemList}
-          checkboxChange={this.handleCheckboxChange}
-          itemDblClick={this.handleItemDblClick}
-          delBtnClick={this.handleDelBtnClick}
-        />
+        <div className='to_do_wrapper'>
+          <ItemList 
+            itemList={this.state.itemList}
+            checkboxChange={this.handleCheckboxChange}
+            itemDblClick={this.handleItemDblClick}
+            delBtnClick={this.handleDelBtnClick}
+            listHeader='正在进行的事项'
+            itemChecked={false}
+          />
+        </div>
 
-        <CompleteItemList
-          itemList={this.state.itemList}
-          checkboxChange={this.handleCheckboxChange}
-          itemDblClick={this.handleItemDblClick}
-          delBtnClick={this.handleDelBtnClick}
-        />
+        {/* 下面是 已完成的事项 组件 */}
+        <div className='complete_wrapper'>
+          <ItemList 
+            itemList={this.state.itemList}
+            checkboxChange={this.handleCheckboxChange}
+            itemDblClick={this.handleItemDblClick}
+            delBtnClick={this.handleDelBtnClick}
+            listHeader='已完成的事项'
+            itemChecked={true}
+          />
+        </div>
 
       </div>   
       
