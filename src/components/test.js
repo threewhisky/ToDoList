@@ -1,7 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
 
+class X extends Component {
 
-class x extends React.Component {
+  constructor(props){
+    super(props);
+
+    // 绑定this
+    
+  }
+
   render () {
     return (
       <div></div>
@@ -9,4 +16,4 @@ class x extends React.Component {
   }
 }
 
-export default x;
+export default X;
