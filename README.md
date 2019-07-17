@@ -5,11 +5,11 @@
 <br>
 
 ## 如何运行ToDoList
-1. 打开你准备存储这个项目的文件夹然后将项目克隆到本地。（或者下载压缩包到文件夹中）  
-```
-git clone git@github.com:threewhisky/ToDoList.git  
-cd ToDoList
-```
+1. 打开你准备存储这个项目的文件夹然后将项目克隆到本地。（或者下载压缩包到文件夹中）
+    ```
+    git clone git@github.com:threewhisky/ToDoList.git  
+    cd ToDoList
+    ```
 
 2. 安装依赖  
 `npm install`
@@ -17,7 +17,7 @@ cd ToDoList
 3. 执行运行命令  
 `npm start`  
 
-4. 在浏览器中国打开 http://localhost:3000/ ，便可以开始使用 **ToDoList** 。  
+4. 在浏览器中打开 http://localhost:3000/ ，便可以开始使用 **ToDoList** 。  
 
 <br>
 
@@ -47,10 +47,9 @@ cd ToDoList
 
 2. 对组件进行合理拆分，方便继续维护改良，减少代码耦合性，且在细节处进行性能优化，提高了运行效率。
 
-3. 该项目完美适配移动端！  
-由于项目使用的是flex弹性布局，使其在不同大小的窗口或移动端上都有良好的展示效果。
+3. 该项目完美适配移动端！由于项目使用的是flex弹性布局，使其在不同大小的窗口或移动端上都有良好的展示效果。
 
-4. ToDoList允许用户管理待办事项列表（CRUD）
+4. ToDoList允许用户管理待办事项列表（CRUD）
    - 查看待办事项
    - 将新的待办事项添加到列表中
    - 双击编辑待办事项
