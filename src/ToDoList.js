@@ -115,6 +115,7 @@ class ToDoList extends React.Component {
   handleClearAllBtn(){
     const itemList =[];
     this.setState({itemList});
+    window.localStorage.setItem('itemList', JSON.stringify(itemList)); //本地储存待办事项
   }
 
 
