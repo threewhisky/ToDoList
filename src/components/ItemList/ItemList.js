@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import Item from '../Item/Item';
+import './ItemList.css';
 
 class ItemList extends Component {
 
@@ -7,8 +8,8 @@ class ItemList extends Component {
     const itemChecked = this.props.itemChecked;
     return (
       <Fragment>
-        <h3>{this.props.listHeader}</h3>
-        <ul className="item_list">
+        <h3 className="item_list_title">{this.props.listHeader}</h3>
+        <ol className="item_list">
           {
             this.props.itemList.map((item, index) => {
               // 区分 正在进行列表 和 已完成列表
@@ -33,7 +34,7 @@ class ItemList extends Component {
               }
             })
           }
-        </ul>
+        </ol>
       </Fragment>
 
     );

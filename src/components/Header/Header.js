@@ -4,7 +4,7 @@ import './Header.css';
 class Header extends React.Component {
     render () {
         return (
-            <h2 className="header">ToDoList（待办事项）</h2>
+            <h2 className="header_title">ToDoList（待办事项）</h2>
         );
     }
 }
