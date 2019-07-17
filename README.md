@@ -1,68 +1,70 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ToDoList
 
-## Available Scripts
+![ToDoList页面效果展示](./demo_image.png)
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+## 如何运行ToDoList
+1. 打开你准备存储这个项目的文件夹然后将项目克隆到本地。（或者下载压缩包到文件夹中）  
+```
+git clone git@github.com:threewhisky/ToDoList.git  
+cd ToDoList
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. 安装依赖  
+`npm install`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+3. 执行运行命令  
+`npm start`  
 
-### `npm test`
+4. 在浏览器中国打开 http://localhost:3000/ ，便可以开始使用 **ToDoList** 。  
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+## ToDoList的基本使用方法
+1. 在**input输入框**中输入你的待办事项，然后按下**回车**或者点击输入框右边的**添加按钮**，该待办事项就会自动添加到 *正在进行的事项* 列表中。 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. 点击事项左侧的**checkbox方框**，即可将该事项移动到 *已完成的事项* 列表中。
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+3. **双击事项的内容**，即可重新编辑该事项的内容。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. 点击事项右侧的**删除按钮**，便会将该事项从你的待办事项中**移除**（注意是删除事项，不是添加到完成列表中）。
+<br><br>
 
-### `npm run eject`
+5. 在 *已完成的事项* 列表中你可以点击已完成事项左侧的**checkbox方框**，便会将该事项重新移入 *正在进行的事项* 列表中。
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+6. 在 *已完成的事项* 列表中**双击事项的内容**，即可重新编辑该事项的内容并在编辑完后将该事项重新移入 *正在进行的事项* 列表中。
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+7. 在 *已完成的事项* 列表中点击事项右侧的**删除按钮**，便会将该事项从你的待办事项中**移除**。
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+8. 点击页面底部的**清空所有事项按钮**，便会将页面内所有的事项**全部移除**，且**不可恢复**（慎点）。
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 该项目(ToDoList)的亮点
+1. 使用 React 搭建，借助 Ant Design UI 对页面进行设计，页面精美。
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. 对组件进行合理拆分，方便继续维护改良，减少代码耦合性，且在细节处进行性能优化，提高了运行效率。
 
-### Code Splitting
+3. 该项目完美适配移动端！  
+由于项目使用的是flex弹性布局，使其在不同大小的窗口或移动端上都有良好的展示效果。
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+4. ToDoList允许用户管理待办事项列表（CRUD）
+   - 查看待办事项
+   - 将新的待办事项添加到列表中
+   - 双击编辑待办事项
+   - 从列表中删除待办事项
 
-### Analyzing the Bundle Size
+5. ToDoList使用HTML5的本地储存新特性，使你刷新页面也不会丢失数据。
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+6. 将数据分类成 *正在进行的事项* 和 *已完成的事项* ，大幅提高了用户体验。
 
-### Making a Progressive Web App
+7. 在细节处提高用户体验：  
+    - 待办事项的内容做了溢出文本打点处理。
+    - 双击编辑事项时输入单引号非常规字符也可正常编辑显示。
+    - 阻止双击编辑事件冒泡，在编辑事项时双击也不会出现意料之外的结果。
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## 写在最后
+> 如果你觉得对你有帮助，点击页面右上角的 **Star** 我就能收到你的心意！ 
