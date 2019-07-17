@@ -1,0 +1,30 @@
+
+/* 下面是让 待办事项列表 和 已完成事项列表 居中弹性显示 */
+.content_wrapper .to_do_wrapper,
+.content_wrapper .complete_wrapper{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_wrapper .to_do_wrapper .to_do_group,
+.content_wrapper .complete_wrapper .complete_group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 682px;
+}
+
+/* 下面是设置清空列表按钮的样式 */
+.clear_all_item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.clear_all_item .clear_all_btn{
+  width: 300px;
+}
+
+

@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import { Checkbox, Button } from 'antd';
+import 'antd/dist/antd.css';
+import './Item.css';
 
 class Item extends Component {
 
@@ -26,15 +29,25 @@ class Item extends Component {
     this.props.function.delBtnClick(index);
   }
 
+
   render () {
     const item = this.props.item;
     const index = this.props.index;
     return (
+      
       <div className='item_wrapper' key={index}>
         <li className='item' id={'li-'+index}>
-          <input className='item_checkbox' type='checkbox' checked={item.checked} onChange={()=>this.handleCheckboxChange(index)}></input>
-          <p className='item_content' id={'p-'+index} onDoubleClick={()=>this.handleItemDblClick(index)}>{item.title}</p>
-          <button className="item_button" onClick={()=>this.handleDelBtnClick(index)}>删除</button>
+          <div className='item_left'>
+            <Checkbox 
+              className='item_checkbox' 
+              checked={item.checked} 
+              onChange={()=>this.handleCheckboxChange(index)}
+            />
+            <p className='item_content' id={'p-'+index} onDoubleClick={()=>this.handleItemDblClick(index)}>{item.title}</p>
+          </div>
+          <div className='item_right'>
+            <Button className="item_button item_right" type="danger" onClick={()=>this.handleDelBtnClick(index)}>删除</Button>
+          </div>
         </li>
       </div>
     );

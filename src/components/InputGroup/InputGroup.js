@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
+import { Input, Button, Icon } from 'antd';
+import 'antd/dist/antd.css';
+import './InputGroup.css';
 
-class Input extends Component {
+
+class InputGroup extends Component {
 
   constructor(props){
     super(props);
@@ -29,11 +33,23 @@ class Input extends Component {
   render () {
     return (
       <div className="input_wrapper">
-        <input className="input" value={this.props.inputValue} onKeyDown={this.handleKeyDown} onChange={this.handleInputChange}></input>
-        <button className="add_button" onClick={this.handleAddBtnClick}>添加</button>
+        <Input 
+          className="input" 
+          prefix={<Icon type="plus" style={{ color: 'rgba(0,0,0,.25)' }} />}
+          placeholder="添加ToDo，按回车或点击添加按钮即可保存"
+          value={this.props.inputValue} 
+          onKeyDown={this.handleKeyDown} 
+          onChange={this.handleInputChange} 
+        />
+        <Button 
+          className="add_button" 
+          type="primary" 
+          icon="plus"
+          onClick={this.handleAddBtnClick}
+        >添加</Button>
       </div>
     );
   }
 }
 
-export default Input;
+export default InputGroup;
