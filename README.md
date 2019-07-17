@@ -5,14 +5,15 @@
 <br>
 
 ## 如何运行ToDoList
-1. 打开你准备存储这个项目的文件夹然后将项目克隆到本地。（或者下载压缩包到文件夹中）
-    ```
-    git clone git@github.com:threewhisky/ToDoList.git  
-    cd ToDoList
-    ```
+1. 打开你准备存储这个项目的文件夹然后将项目克隆到本地。（或者下载压缩包到文件夹中）  
+`git clone git@github.com:threewhisky/ToDoList.git  `  
+然后切换到项目根目录  
+`cd ToDoList`
 
 2. 安装依赖  
-`npm install`
+`npm install`  
+或使用淘宝镜像（更快速稳定）  
+`cnpm install`
 
 3. 执行运行命令  
 `npm start`  
